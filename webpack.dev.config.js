@@ -3,6 +3,7 @@ const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
 module.exports = {
   devtool: "cheap-module-eval-source-map",
@@ -58,6 +59,9 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    stats: "errors-only"
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: __dirname + "/src/index.html",
@@ -70,6 +74,21 @@ module.exports = {
       async: true,
       minChunks: Infinity
     }),
-    new ExtractTextPlugin({ filename: "style.bundle.css" })
+    new ExtractTextPlugin({ filename: "style.bundle.css" }),
+    new SWPrecacheWebpackPlugin({
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: "service-worker.js",
+      logger(message) {
+        if (message.indexOf("Total precache size is") === 0) {
+          // This message occurs for every build and is a bit too noisy.
+          return;
+        }
+        console.log(message);
+      },
+      minify: true,
+      navigateFallback: __dirname + "src/index.html",
+      navigateFallbackWhitelist: [/^(?!\/__).*/],
+      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
+    })
   ]
 };
