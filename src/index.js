@@ -3,8 +3,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import "./index.css";
-import "./assets/css/style.scss";
+import "antd/dist/antd.css";
+
 import App from "./App";
 
 const app = (

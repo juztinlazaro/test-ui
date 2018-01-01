@@ -1,25 +1,21 @@
 import React, { Component } from "react";
-import { Link, Route } from "react-router-dom";
-
-import Users from "./modules/Users";
-import asyncComponent from "./hoc/asyncComponent";
-
-const AsyncPizza = asyncComponent(() => {
-  return import("./modules/Pizza.js");
-});
-
+import { Icon } from "antd";
+import Button from "./ui/WrappAnt";
+import "antd/dist/antd.css";
+const ButtonGroup = Button.Group;
 class App extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Link to="/">Users</Link> |
-          <Link to="/pizza">Pizza</Link>
-        </div>
-        <div>
-          <Route path="/" exact component={Users} />
-          <Route path="/pizza" component={AsyncPizza} />
-        </div>
+        test
+        <Button type="primary">Primary</Button>
+        <Button type="danger">Danger</Button>
+        <Icon type="step-backward" />
+        <ButtonGroup>
+          <Button disabled>L</Button>
+          <Button disabled>M</Button>
+          <Button disabled>R</Button>
+        </ButtonGroup>
       </div>
     );
   }
