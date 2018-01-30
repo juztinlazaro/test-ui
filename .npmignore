@@ -2,10 +2,12 @@
 build
 docx
 node_modules
-App.js
 index.html
 index.js
 .babelrc
 README.md
 webpack.dev.config.js
 webpack.prod.config.js
+.sass-cache
+css/main.css.map
+component

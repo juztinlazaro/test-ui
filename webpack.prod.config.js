@@ -4,18 +4,25 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
+var glob = require("glob");
 
 module.exports = {
   devtool: "cheap-module-source-map",
-  entry: "./index.js",
+  entry: {
+    "build/lib": glob.sync("./lib/**/*.js")
+  },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
+    filename: "[name].js",
     chunkFilename: "[id].js",
-    publicPath: ""
+    publicPath: "/"
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx"],
+    alias: {
+      COMPONENT: path.resolve(__dirname, "component"),
+      PAGES: path.resolve(__dirname, "docx/pages")
+    }
   },
   module: {
     rules: [
@@ -53,10 +60,18 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
-        loader: "url-loader?limit=8000&name=images/[name].[ext]"
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader?limit=8000&name=images/[name].[ext]'
+          }
+        ]
       }
     ]
+  },
+  devServer: {
+    stats: "errors-only",
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
