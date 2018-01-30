@@ -9,7 +9,7 @@ var glob = require("glob");
 module.exports = {
   devtool: "cheap-module-source-map",
   entry: {
-    "build/lib": glob.sync("./lib/**/*.js")
+    "build/docx": glob.sync("./docx/**/*.js")
   },
   output: {
     path: path.resolve(__dirname, "build"),
