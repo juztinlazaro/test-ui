@@ -1,7 +1,7 @@
 {
-  "name": "jsl_ui_kit",
-  "version": "1.0.8",
-  "description": "jsl_ui_kit",
+  "name": "test_ui_kit",
+  "version": "1.0.10",
+  "description": "test_ui_kit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
