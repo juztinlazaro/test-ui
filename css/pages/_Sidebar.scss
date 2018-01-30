@@ -1,0 +1,32 @@
+.Sidebar-section {
+  .home-link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 17px;
+    display: block;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .sidebar-container {
+    background-color: $primary-darker;
+  }
+
+  .sidebar-container .link {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-top: 1px solid #f0f0f0;
+
+    &:last-child {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+
+  .activeLink {
+    background-color: $primary-dark !important;
+  }
+}

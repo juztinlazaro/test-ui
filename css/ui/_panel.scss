@@ -1,0 +1,24 @@
+.panel {
+  border: 1px solid $ash-light;
+  background: #fff;
+
+  .header,
+  .body,
+  .footer {
+    padding: 10px 15px;
+  }
+
+  .body + .body {
+    border-top: 1px solid $ash-light;
+  }
+
+  .header {
+    background: $ash-lighter;
+    border-bottom: 1px solid $ash-light;
+  }
+
+  .footer {
+    background: $ash-lighter;
+    border-top: 1px solid $ash-light;
+  }
+}

@@ -1,0 +1,148 @@
+.ColorScheme-section {
+  .title {
+    border-bottom: 1px solid rgb(211, 209, 209);
+    padding: 10px 0px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .color-container {
+    margin-bottom: 40px;
+  }
+
+  .color-container .color-wrapper {
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
+    margin-right: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  ._primary {
+    background-color: $primary;
+  }
+
+  ._primary-light {
+    background-color: $primary-light;
+  }
+
+  ._primary-lighter {
+    background-color: $primary-lighter;
+  }
+
+  ._primary-dark {
+    background-color: $primary-dark;
+  }
+
+  ._primary-darker {
+    background-color: $primary-darker;
+  }
+
+  ._sky {
+    background-color: $sky;
+  }
+
+  ._sky-light {
+    background-color: $sky-light;
+  }
+
+  ._sky-lighter {
+    background-color: $sky-lighter;
+  }
+
+  ._sky-dark {
+    background-color: $sky-dark;
+  }
+
+  ._sky-darker {
+    background-color: $sky-darker;
+  }
+
+  ._jade {
+    background-color: $jade;
+  }
+
+  ._jade-light {
+    background-color: $jade-light;
+  }
+
+  ._jade-lighter {
+    background-color: $jade-lighter;
+  }
+
+  ._jade-dark {
+    background-color: $jade-dark;
+  }
+
+  ._jade-darker {
+    background-color: $jade-darker;
+  }
+
+  ._pumpkin {
+    background-color: $pumpkin;
+  }
+
+  ._pumpkin-light {
+    background-color: $pumpkin-light;
+  }
+
+  ._pumpkin-lighter {
+    background-color: $pumpkin-lighter;
+  }
+
+  ._pumpkin-dark {
+    background-color: $pumpkin-dark;
+  }
+
+  ._pumpkin-darker {
+    background-color: $pumpkin-darker;
+  }
+
+  ._crimson {
+    background-color: $crimson;
+  }
+
+  ._crimson-light {
+    background-color: $crimson-light;
+  }
+
+  ._crimson-lighter {
+    background-color: $crimson-light;
+  }
+
+  ._crimson-dark {
+    background-color: $crimson-dark;
+  }
+
+  ._crimson-darker {
+    background-color: $crimson-darker;
+  }
+
+  ._ash {
+    background-color: $ash;
+  }
+
+  ._ash-light {
+    background-color: $ash-light;
+  }
+
+  ._ash-lighter {
+    background-color: $ash-lighter;
+  }
+
+  ._ash-dark {
+    background-color: $ash-dark;
+  }
+
+  ._ash-darker {
+    background-color: $ash-darker;
+  }
+}

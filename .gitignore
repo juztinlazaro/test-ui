@@ -1,3 +1,6 @@
 node_modules
 .DS_Store
 build
+.sass-cache
+css/main.css.map
+lib

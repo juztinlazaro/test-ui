@@ -5,17 +5,47 @@ const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
+var os = require("os");
+var ifaces = os.networkInterfaces();
+let ip;
+
+Object.keys(ifaces).forEach(function(ifname) {
+  var alias = 0;
+
+  ifaces[ifname].forEach(function(iface) {
+    if ("IPv4" !== iface.family || iface.internal !== false) {
+      // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
+      return;
+    }
+
+    if (alias >= 1) {
+      // this single interface has multiple ipv4 addresses
+      ip = iface.address;
+      console.log("Your local address" + ":" + alias, ip + ":8080");
+    } else {
+      // this interface has only one ipv4 adress
+      ip = iface.address;
+      console.log("Your local address", ip + ":8080");
+    }
+    ++alias;
+  });
+});
+
 module.exports = {
   devtool: "cheap-module-eval-source-map",
-  entry: "./src/index.js",
+  entry: "./docx/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
     chunkFilename: "[id].js",
-    publicPath: ""
+    publicPath: "/"
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx"],
+    alias: {
+      COMPONENT: path.resolve(__dirname, "component"),
+      PAGES: path.resolve(__dirname, "docx/pages")
+    }
   },
   module: {
     rules: [
@@ -53,17 +83,26 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
-        loader: "url-loader?limit=8000&name=images/[name].[ext]"
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader?limit=8000&name=images/[name].[ext]'
+          }
+        ]
       }
     ]
   },
   devServer: {
-    stats: "errors-only"
+    stats: "errors-only",
+    historyApiFallback: true,
+    // host: ip,
+    port: 8080
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: __dirname + "/src/index.html",
+      template: __dirname + "/index.html",
       filename: "index.html",
       inject: "body"
     }),
@@ -85,7 +124,7 @@ module.exports = {
         console.log(message);
       },
       minify: true,
-      navigateFallback: __dirname + "src/index.html",
+      navigateFallback: __dirname + "/index.html",
       navigateFallbackWhitelist: [/^(?!\/__).*/],
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
     })

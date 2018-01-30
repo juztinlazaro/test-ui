@@ -1,0 +1,15 @@
+.Layout-section {
+  .Sidebar-section,
+  .Header-section {
+    background-color: $primary;
+  }
+
+  .Content-section {
+    min-height: calc(100vh - 135px);
+    padding: 2%;
+    height: 100%;
+  }
+
+  .Footer-section {
+  }
+}

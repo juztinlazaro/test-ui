@@ -1,17 +1,20 @@
 {
   "name": "jsl_ui_kit",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.8",
+  "description": "jsl_ui_kit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.dev.config.js",
-    "build":
-      "rimraf build && webpack --config webpack.prod.config.js --progress --profile --color"
+    "start": "webpack-dev-server --config webpack.dev.config.js --open --color",
+    "build": "rimraf build && webpack --config webpack.prod.config.js --progress --profile --color",
+    "build:lib": "babel component -d lib",
+    "build:style": "sass css/main.scss:css/main.css",
+    "docx": "serve -s build --open"
   },
   "author": "Justin Lazaro",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -25,17 +28,34 @@
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.0.9",
     "sass-loader": "^6.0.6",
+    "serve": "^6.4.9",
     "style-loader": "^0.19.1",
     "sw-precache-webpack-plugin": "^0.11.4",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7"
+    "webpack-dev-server": "^2.9.7",
+    "webpack-glob": "^2.0.2"
   },
   "dependencies": {
     "antd": "^3.0.3",
     "babel-polyfill": "^6.26.0",
+    "draft-convert": "^2.0.1",
+    "draft-js": "^0.10.5",
+    "draft-js-alignment-plugin": "^2.0.1",
+    "draft-js-focus-plugin": "^2.0.1",
+    "draft-js-hashtag-plugin": "^2.0.1",
+    "draft-js-linkify-plugin": "^2.0.1",
+    "draft-js-plugins-editor": "^2.0.4",
+    "draftjs-to-html": "^0.8.2",
+    "html-to-draftjs": "^1.1.2",
+    "immutable": "^3.8.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-draft-wysiwyg": "^1.12.7",
     "react-router-dom": "^4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:juztinlazaro/test-ui.git"
   }
 }
