@@ -7,7 +7,7 @@ const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
 module.exports = {
   devtool: "cheap-module-eval-source-map",
-  entry: "./src/index.js",
+  entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
@@ -63,7 +63,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + "/src/index.html",
+      template: __dirname + "/index.html",
       filename: "index.html",
       inject: "body"
     }),
@@ -85,7 +85,7 @@ module.exports = {
         console.log(message);
       },
       minify: true,
-      navigateFallback: __dirname + "src/index.html",
+      navigateFallback: __dirname + "/index.html",
       navigateFallbackWhitelist: [/^(?!\/__).*/],
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
     })

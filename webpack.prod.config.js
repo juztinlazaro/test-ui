@@ -3,10 +3,11 @@ const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
 module.exports = {
   devtool: "cheap-module-source-map",
-  entry: "./src/index.js",
+  entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
@@ -25,17 +26,16 @@ module.exports = {
       },
       {
         test: /\.(s*)css$/,
-        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: [
             {
-              loader: "css-loader", // translates CSS into CommonJS
-              options: {
-                importLoaders: 1,
-                modules: true,
-                localIdentName: "[name]_[local]_[hash:base64:5]"
-              }
+              loader: "css-loader" // translates CSS into CommonJS
+              // options: {
+              //   importLoaders: 1,
+              //   modules: true,
+              //   localIdentName: "[name]_[local]_[hash:base64:5]"
+              // }
             },
             { loader: "sass-loader" },
             {
@@ -60,11 +60,26 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + "/src/index.html",
+      template: __dirname + "/index.html",
       filename: "index.html",
       inject: "body"
     }),
     new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin({ filename: "style.bundle.css" })
+    new ExtractTextPlugin({ filename: "style.bundle.css" }),
+    new SWPrecacheWebpackPlugin({
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: "service-worker.js",
+      logger(message) {
+        if (message.indexOf("Total precache size is") === 0) {
+          // This message occurs for every build and is a bit too noisy.
+          return;
+        }
+        console.log(message);
+      },
+      minify: true,
+      navigateFallback: __dirname + "/index.html",
+      navigateFallbackWhitelist: [/^(?!\/__).*/],
+      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
+    })
   ]
 };
