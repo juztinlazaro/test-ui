@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Layout from "antd/lib/layout";
 
 import Routes from "./routes/routes";
-import SideBar from "PAGES/Sidebar/Sidebar";
-import Navigation from "PAGES/Navigation/Navigation";
-import Footers from "PAGES/Footer/Footer";
+import SideBar from "./pages/Sidebar/Sidebar";
+import Navigation from "./pages/Navigation/Navigation";
+import Footers from "./pages/Footer/Footer";
 
 const { Header, Footer, Sider, Content } = Layout;
 

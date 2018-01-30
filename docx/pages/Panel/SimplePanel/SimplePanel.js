@@ -1,5 +1,5 @@
 import React from "react";
-import Panel from "COMPONENT/Panel";
+import Panel from "../../../../component/Panel";
 
 const SimplePanel = () => {
   return (

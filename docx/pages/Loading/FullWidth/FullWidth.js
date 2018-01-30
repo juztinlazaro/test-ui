@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "antd/lib/button";
-import FullWidthLoading from "COMPONENT/FullWidthLoading";
+import FullWidthLoading from "../../../../component/FullWidthLoading";
 
 const fullWidth = props => {
   return (

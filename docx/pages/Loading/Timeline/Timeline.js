@@ -1,5 +1,5 @@
 import React from 'react';
-import TimelineLoading from "COMPONENT/TimelineLoading";
+import TimelineLoading from "../../../../component/TimelineLoading";
 import Code from "../../../utils/Code/Code";
 
 const Timeline = () => {
