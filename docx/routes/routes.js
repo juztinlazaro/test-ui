@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Home from "PAGES/Home/Home";
-import ColorScheme from "PAGES/ColorScheme/ColorScheme";
-import GuideLines from "PAGES/GuideLines/GuideLines";
-import Loading from "PAGES/Loading/Loading";
-import PanelDocx from "PAGES/Panel/Panel";
-import Helpers from "PAGES/Helpers/Helpers";
-import Slate from 'PAGES/Slate/Slate';
-import WysiwygDocx from 'PAGES/Wysiwyg/Wysiwyg';
+import Home from "../pages/Home/Home";
+import ColorScheme from "../pages/ColorScheme/ColorScheme";
+import GuideLines from "../pages/GuideLines/GuideLines";
+import Loading from "../pages/Loading/Loading";
+import PanelDocx from "../pages/Panel/Panel";
+import Helpers from "../pages/Helpers/Helpers";
+import Slate from '../pages/Slate/Slate';
+import WysiwygDocx from '../pages/Wysiwyg/Wysiwyg';
 
 class Routes extends Component {
   render() {
