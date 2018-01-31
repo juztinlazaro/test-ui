@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Tabs from "antd/lib/tabs";
 import { Link } from 'react-router-dom';
-import FullWidth from "./FullWitdh/FullWith"
+import FullWidth from "./FullWidth/FullWidth"
 import Timeline from "./Timeline/Timeline";
 const TabPane = Tabs.TabPane;
 
