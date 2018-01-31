@@ -1,5 +1,6 @@
 import React from 'react';
-import Wysiwyg from '../../../../component/Wysiwyg';
+import Wysiwyg from '../../../../lib/Wysiwyg';
+// import Wysiwyg from 'COMPONENT/Wysiwyg';
 
 const Basic = props => {
   return (
@@ -19,7 +20,7 @@ const Basic = props => {
           </span>
 
           <span className="_text-sky">
-            {' "Test_ui_kit/lib/Wysiwyg"; '}
+            {' "test_ui/lib/Wysiwyg"; '}
           </span>
         </div>
         

@@ -3,18 +3,24 @@ import Spin from "antd/lib/spin";
 import Alert from "antd/lib/alert";
 
 const FullWidthLoading = props => {
+  const wrapperClass = `FullWidthLoading ${props.scheme}`;
   return (
-    <section className="FullWidthLoading">
-      <Spin
-        delay={props.delay}
-        indicator={props.indicator}
-        size={props.size}
-        spinning={props.spinning}
-        tip={props.tip}
-        wrapperClassName={props.wrapperClassName}
-      >
-        {props.children}
-      </Spin>
+    <section className={wrapperClass}>
+      {
+        props.type === "Spin" && <Spin size="large" />
+      }
+
+      {
+        props.type === 'Dotted' && <div className="dotted-loader" />
+      }
+
+      {
+        props.type === 'Rounded' && <div className="rounded-loader" />
+      }
+
+      {
+        props.type === 'Spinner' && <div className="spinner-loader" />
+      }
     </section>
   );
 };

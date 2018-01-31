@@ -27,11 +27,13 @@ a:active {
 }
 
 .code {
-  background-color: $ash-lighter;
+  background-color: rgb(233, 232, 232);
   padding: 20px;
   margin: 10px;
   width: 700px;
   font-weight: bold;
+  display: block;
+  margin: 30px auto;
 
   .code {
     background-color: transparent !important;
@@ -42,4 +44,12 @@ a:active {
 
 ._margin-left {
   margin-left: 20px;
+}
+
+.loading-wrapper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
 }

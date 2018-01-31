@@ -1,15 +1,15 @@
-# [Test UI kit v1 BETA](https://www.npmjs.com/package/Test_ui_kit)
+# [Test ui UI kit v1 BETA](https://www.npmjs.com/package/test_ui)
 
 ```
-npm install Test_ui_kit --save
+npm install test_ui --save
 ```
 
-The UI Kit that powers Test's internal projects built on ReactJS, Sass and Antdesign.
+The UI Kit that powers Test ui's internal projects built on ReactJS, Sass and Antdesign.
 
-### [Visit the documentation](https://uikit.Testapp.com/)
+### [Visit the documentation](https://uikit.Test uiapp.com/)
 
 ### Standards and Guidelines
-https://github.com/Test/Test_ReactStarterKit/wiki/Css-Style-Guide
+https://github.com/Test ui/Test ui_ReactStarterKit/wiki/Css-Style-Guide
 
 # Usage
 
@@ -17,19 +17,19 @@ We are using sass, simply import the `scss` file.
 
 ```
 // compiled
-@import "..path/node_modules/Test_ui_kit/css/main.scss"
+@import "..path/node_modules/test_ui/css/main.scss"
 
 //variables
-@import "..path/Test_ui_kit/css/utils/variables"
+@import "..path/test_ui/css/utils/variables"
 
 //helpers
-@import "..path/Test_ui_kit/css/utils/helpers"
+@import "..path/test_ui/css/utils/helpers"
 ```
 
 or  css
 
 ```
-import "Test_ui_kit/css/main.css"
+import "test_ui/css/main.css"
 ```
 # Development
 
@@ -60,4 +60,4 @@ Special thanks to our inspirations:
 * [Rico Sta. Cruz](http://rscss.io/)
 * [maintainablecss](https://maintainablecss.com/chapters/)
 
-**_Test_ui_kit_** should never be used outside of officially endorsed Test products or without explicit permission.
+**_test_ui_** should never be used outside of officially endorsed Test ui products or without explicit permission.

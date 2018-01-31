@@ -1,7 +1,7 @@
 {
-  "name": "test_ui_kit",
-  "version": "1.0.10",
-  "description": "test_ui_kit",
+  "name": "test_ui",
+  "version": "1.0.36",
+  "description": "test_ui",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -56,6 +56,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:juztinlazaro/test-ui.git"
+    "url": "git@github-Test ui:Test ui/Test ui_UIKit.git"
   }
 }

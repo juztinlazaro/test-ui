@@ -9,10 +9,19 @@ class Guidelines extends Component {
           While not limited to, we have a set of guidelines and standards to
           keep our code consistent. This covers both JS and CSS.
         </p>
+        <p>
+          Please check our frontend documentation{" "}
+          <a
+            target="_blank"
+            href="https://github.com/Test ui/Test ui_ReactStarterKit/wiki"
+          >
+            here.
+          </a>
+        </p>
 
         <h2>
           {" "}
-          The UI Kit that powers Test's internal projects built on ReactJS,
+          The UI Kit that powers Test ui's internal projects built on ReactJS,
           Sass and wrap in Antdesign.
         </h2>
 
@@ -38,7 +47,7 @@ class Guidelines extends Component {
 
         <h4 className="_text-crimson"> Or import in app root</h4>
         <div className="code">
-          import 'jsl_ui_kit/css/main.css'
+          import 'test_ui/css/main.css'
         </div>
 
         <h4 className="_text-crimson">
@@ -47,7 +56,7 @@ class Guidelines extends Component {
         <div className="code">
           // example 
           <br />
-          <h4>import TimelineLoading from 'jsl_ui_kit/lib/TimelineLoading'</h4>
+          <h4>import TimelineLoading from 'test_ui/lib/TimelineLoading'</h4>
           <br />
           {" <TimelineLoading /> "}
         </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Icon from 'antd/lib/icon';
+import Slate from 'COMPONENT/Slate';
 import Code from "../../../utils/Code/Code";
 import BlockCode from "../../../utils/BlockCode/BlockCode";
 
@@ -16,54 +17,75 @@ class BasicSlate extends Component {
 
   render() {
     return <section>
-        <section className="slate _spacer-md">
-          <Icon className="-text-xl" type="mail" />
-          <h1 className="-text-md"> This is a blank slate </h1>
-          <p>
-            Use it to provide information when no dynamic content exists.
-          </p>
+        <section className="code">
+          <h3 className="_spacer"> Usage: </h3>
+
+          <span className="_text-crimson"> import </span>
+          <span className="_text-jade"> Slate </span>
+          <span className="_text-sky"> from </span>
+          <span className="_text-crimson _spacer"> 'test_ui/lib/Slate'; </span>
+
+          <div className="_spacer" />
+
+          <h4 className="_text-crimson">
+            {' <Slate '}
+          </h4>
+
+          <div className="_margin-left">
+            <h4 className="_text-sky">
+              {' type="-plain" '}
+            </h4>
+              
+            <h4 className="_text-sky">
+              {' icon={<Icon className="-text-xl" type="mail" />} '}
+            </h4>
+
+            <h4 className="_text-sky">
+              {' title="Slate with No Background" '}
+            </h4>
+
+            <h4 className="_text-sky">
+              {' description="Use it to provide information when no dynamic content exists." '}
+            </h4>
+          </div>
+
+          <h4 className="_text-crimson">
+            {' /> '}
+          </h4>
         </section>
+        
+        <Slate
+          type="_spacer-md"
+          icon={<Icon className="-text-xl" type="mail" />}
+          title="This is a blank slate"
+          description="Use it to provide information when no dynamic content exists."
+        />
 
         <h3>
           Add the
-          <span className="_text-pumpkin"> .-spacious </span>
-          class to your slate.
+          <span className="_text-pumpkin"> -spacious </span>
+          type to your slate.
         </h3>
 
-        <section className="slate _spacer-md -spacious">
-          <Icon className="-text-xl" type="mail" />
-          <h1 className="-text-md"> Slate spacious </h1>
-          <p>
-            Use it to provide information when no dynamic content exists.
-          </p>
-        </section>
+        <Slate
+          type="-spacious _spacer-md"
+          icon={<Icon className="-text-xl" type="mail" />}
+          title="Slate spacious"
+          description="Use it to provide information when no dynamic content exists."
+        />
 
         <h3>
           Add the
-          <span className="_text-pumpkin"> .-plain </span>
-          class to your slate.
+          <span className="_text-pumpkin"> -plain </span>
+          type to your slate.
         </h3>
 
-        <section className="slate _spacer-md -plain">
-          <Icon className="-text-xl" type="mail" />
-          <h1 className="-text-md"> Slate with No Background </h1>
-          <p>
-            Use it to provide information when no dynamic content exists.
-          </p>
-        </section>
-
-        <section>
-          <h4> Usage: </h4>
-          <BlockCode element="div" cssClassName="slate">
-            <Code element="Icon" propsItems={this.state.type} />
-
-            <Code element="h1">This is a blank slate</Code>
-
-            <Code element="p">
-              Use it to provide information when no dynamic content exists.
-            </Code>
-          </BlockCode>
-        </section>
+        <Slate
+          type="-plain _spacer-md"
+          icon={<Icon className="-text-xl" type="mail" />}
+          title="Slate with No Background"
+          description="Use it to provide information when no dynamic content exists."
+        />
       </section>;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import TimelineLoading from "../../../../component/TimelineLoading";
+import TimelineLoading from "COMPONENT/TimelineLoading";
 import Code from "../../../utils/Code/Code";
 
 const Timeline = () => {
@@ -17,7 +17,7 @@ const Timeline = () => {
         <span className="_text-crimson"> import </span>
         <span className="_text-sky"> TimelineLoading </span>
         <span className="_text-crimson"> from </span>
-        <span className="_text-jade"> "Test_ui_kit/lib/TimelineLoading" </span>
+        <span className="_text-jade"> "test_ui/lib/TimelineLoading" </span>
         <Code element="TimelineLoading" />
       </div>
     </section>;

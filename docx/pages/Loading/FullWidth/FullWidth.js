@@ -1,48 +1,91 @@
 import React from "react";
 import Button from "antd/lib/button";
-import FullWidthLoading from "../../../../component/FullWidthLoading";
+import FullWidthLoading from "COMPONENT/FullWidthLoading";
 
 const fullWidth = props => {
   return (
     <div>
-      <div className="code">
-        <span className="_text-crimson">{`<div `}</span>
-        <span className="_text-sky">{`className="FullWidthLoading">`}</span>
+      <h2> Loader type: Spin, Dotted, Rounded, Spinner</h2>
+      <h2> Loader scheme: -dark</h2>
 
-        <div className="_margin-left">
-          <span className="_text-crimson">{`<Spin`}</span>
-          <br />
-          <span className="_margin-left _text-jade">{` tip="Loading..."`}</span>
-          <br />
-          <span className="_margin-left _text-jade">{` size="large"`}</span>
-          <br />
-          <span className="_margin-left _text-jade">{` delay="5"`}</span>
-          <br />
-          <span className="_text-crimson"> /> </span>
+      <div className="code">
+        <span className="_text-crimson">
+          {' import '} 
+        </span>
+
+        <span className="_text-sky">
+          {' FullWidthLoading '} 
+        </span>
+
+        <span className="_text-crimson">
+          {' from '} 
+        </span>
+
+        <span className="_text-crimson">
+          {" 'test_ui/lib/FullWidthLoading' "}
+        </span>
+
+        <div className="_spacer" />
+
+        <span className="_text-crimson">{`<FullWidthLoading `}</span>
+
+        <div className="_margin-left">          
+          <h4 className="_text-jade">
+            type="dotted"
+          </h4>
+
+          <h4 className="_text-jade">
+            scheme="-dark"
+          </h4>
         </div>
 
-        <span className="_text-crimson"> {`</div>`} </span>
+        <span className="_text-crimson"> {`/>`} </span>
       </div>
 
-      <Button type="primary" onClick={props.onLoading} ghost>
-        {" "}
-        loading{" "}
-      </Button>
+      <div className="loading-wrapper">
+        <FullWidthLoading
+          type="Spin"
+        />
+      </div>
 
-      {props.status && (
-        <FullWidthLoading tip="Loading..." size="large" delay="5" />
-      )}
+      <div className="loading-wrapper">
+        <FullWidthLoading
+          type="Dotted"
+        />
+      </div>
 
-      {props.status && (
-        <Button
-          type="danger"
-          className="_upper-element"
-          onClick={props.onUnloading}
-          ghost
-        >
-          close
-        </Button>
-      )}
+      <div className="loading-wrapper">
+        <FullWidthLoading
+          type="Rounded"
+        />
+      </div>
+
+      <div className="loading-wrapper">
+        <FullWidthLoading
+          type="Spinner"
+        />
+      </div>
+
+      <div className="loading-wrapper">
+        <FullWidthLoading
+          type="Spin"
+          scheme="-dark"
+        />
+      </div>
+
+      <div className="loading-wrapper">
+        <FullWidthLoading
+          type="Dotted"
+          scheme="-dark"
+        />
+      </div>
+
+      <div className="loading-wrapper">
+        <FullWidthLoading
+          type="Rounded"
+          scheme="-dark"
+        />
+      </div>
     </div>
   );
 };

@@ -6,7 +6,8 @@ const Footer = () => (
   <footer>
     <Row>
       <Col span={12} className="_text-left">
-        &copy; Copyright Test 2018.
+        &copy; Copyright Test ui 2018. Created and maintained by the Front End
+        team at Test ui.
       </Col>
 
       <Col className="_text-right" span={12}>
