@@ -1,6 +1,6 @@
 import React from 'react';
-import Wysiwyg from '../../../../lib/Wysiwyg';
-// import Wysiwyg from 'COMPONENT/Wysiwyg';
+// import Wysiwyg from '../../../../lib/Wysiwyg';
+import Wysiwyg from 'COMPONENT/Wysiwyg';
 
 const Basic = props => {
   return (
