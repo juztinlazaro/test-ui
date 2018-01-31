@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Icon from 'antd/lib/icon';
-import Slate from 'COMPONENT/Slate';
+import Slate from '../../../../component/Slate';
 import Code from "../../../utils/Code/Code";
 import BlockCode from "../../../utils/BlockCode/BlockCode";
 
