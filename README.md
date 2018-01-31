@@ -6,7 +6,7 @@ npm install test_ui --save
 
 The UI Kit that powers Test ui's internal projects built on ReactJS, Sass and Antdesign.
 
-### [Visit the documentation](https://uikit.Test uiapp.com/)
+### [Visit the documentation](https://affectionate-feynman-63065d.netlify.com/)
 
 ### Standards and Guidelines
 https://github.com/Test ui/Test ui_ReactStarterKit/wiki/Css-Style-Guide
