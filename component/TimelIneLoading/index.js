@@ -1,6 +1,7 @@
 import React from 'react';
 
-const TimelineLoading = () => <div className="timeline-item">
+const TimelineLoading = () => (
+  <div className="timeline-item">
     <div className="animated-background">
       <div className="background-masker header-top" />
       <div className="background-masker header-left" />
@@ -16,6 +17,7 @@ const TimelineLoading = () => <div className="timeline-item">
       <div className="background-masker content-third-line" />
       <div className="background-masker content-third-end" />
     </div>
-  </div>;
+  </div>
+);
 
 export default TimelineLoading;
