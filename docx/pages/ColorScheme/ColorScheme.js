@@ -7,7 +7,7 @@ class ColorScheme extends Component {
         <h2 className="page-title"> COLORS SCHEME </h2>
         <p className="description">
           Our variants are called primay, sky, jade, pumpkin, crimson; which is
-          to Bootstrap's info, success, warning, danger respectively.
+          to Bootstraps info, success, warning, danger respectively.
         </p>
 
         <div className="color-container">
