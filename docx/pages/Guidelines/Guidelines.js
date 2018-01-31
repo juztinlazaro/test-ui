@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from 'react-router-dom';
 class Guidelines extends Component {
   render() {
     return (
@@ -11,23 +11,23 @@ class Guidelines extends Component {
         </p>
         <p>
           Please check our frontend documentation{" "}
-          <a
+          <Link
             target="_blank"
-            href="https://github.com/Test ui/Test ui_ReactStarterKit/wiki"
+            to="https://github.com/Test ui/Test ui_ReactStarterKit/wiki"
           >
             here.
-          </a>
+          </Link>
         </p>
 
         <h2>
           {" "}
-          The UI Kit that powers Test ui's internal projects built on ReactJS,
+          The UI Kit that powers Test ui internal projects built on ReactJS,
           Sass and wrap in Antdesign.
         </h2>
 
         <h4 className="_text-crimson">Usage</h4>
 
-        <p>We are using sass, simply import the `scss` file.</p>
+        <p>We are using sass, simply import the 'scss' file.</p>
 
         <div className="code">
           // compiled
@@ -56,7 +56,7 @@ class Guidelines extends Component {
         <div className="code">
           // example 
           <br />
-          <h4>import TimelineLoading from 'test_ui/lib/TimelineLoading'</h4>
+          <h4>import TimelineLoading from test_ui/lib/TimelineLoading</h4>
           <br />
           {" <TimelineLoading /> "}
         </div>

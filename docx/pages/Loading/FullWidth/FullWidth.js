@@ -2,7 +2,7 @@ import React from "react";
 import Button from "antd/lib/button";
 import FullWidthLoading from "../../../../component/FullWidthLoading";
 
-const fullWidth = props => {
+const FullWidth = props => {
   return (
     <div>
       <h2> Loader type: Spin, Dotted, Rounded, Spinner</h2>
@@ -90,4 +90,4 @@ const fullWidth = props => {
   );
 };
 
-export default fullWidth;
+export default FullWidth;

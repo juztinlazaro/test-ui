@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Tabs from "antd/lib/tabs";
-import FullWidth from "./FullWidth/FullWidth";
+import { Link } from 'react-router-dom';
+import FullWidth from "./FullWitdh/FullWith"
 import Timeline from "./Timeline/Timeline";
 const TabPane = Tabs.TabPane;
 
@@ -25,9 +26,9 @@ class Loading extends Component {
         <p>
           We only wrap ant design Spin for our loading, for more info please
           check{" "}
-          <a href="https://ant.design/components/spin/" target="_blank">
+          <Link to="https://ant.design/components/spin/" target="_blank">
             the documentation here
-          </a>{" "}
+          </Link>{" "}
           When part of the page is waiting for asynchronous data or during a
           rendering process, an appropriate loading animation can effectively
           alleviate users' inquietude.
